@@ -41,7 +41,7 @@ const MyTask = () => {
 
     return (
         <div>
-            <h3> My task: {addTask?.length}</h3>
+            <h3> Total task: {addTask?.length}</h3>
             {
                 addTask?.map((myTask, i) => <Task
                     index={i} key={myTask._id}
