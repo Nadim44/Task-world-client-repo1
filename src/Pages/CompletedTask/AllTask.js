@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
 
-const Task = ({ myTask, index, modalData, successAction }) => {
+const AllTask = ({ myTask, index, modalData, successAction }) => {
     const { task } = myTask;
     const navigate = useNavigate()
 
@@ -14,8 +14,8 @@ const Task = ({ myTask, index, modalData, successAction }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleNavigate = event => {
-        navigate('/completedTask')
+    const handleNotCompleted = event => {
+        navigate('/myTask')
     }
 
     return (
@@ -31,8 +31,11 @@ const Task = ({ myTask, index, modalData, successAction }) => {
                         <Button variant="danger" onClick={handleShow}>
                             Delete
                         </Button>
-                        <Button variant="success" onClick={handleNavigate}>
+                        <Button variant="success" >
                             Completed
+                        </Button>
+                        <Button variant="primary" onClick={handleNotCompleted} >
+                            Not Completed
                         </Button>
 
                         <Modal show={show} onHide={handleClose}>
@@ -59,4 +62,4 @@ const Task = ({ myTask, index, modalData, successAction }) => {
     );
 };
 
-export default Task;
+export default AllTask;

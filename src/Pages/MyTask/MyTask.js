@@ -4,8 +4,6 @@ import Task from './Task';
 import { toast } from 'react-hot-toast';
 
 
-
-
 const MyTask = () => {
     const { data: addTask, refetch } = useQuery({
         queryKey: ['addTask'],
@@ -39,9 +37,10 @@ const MyTask = () => {
             })
     }
 
+
     return (
         <div>
-            <h3> Total task: {addTask?.length}</h3>
+            <h3> Total Task: {addTask?.length}</h3>
             {
                 addTask?.map((myTask, i) => <Task
                     index={i} key={myTask._id}
