@@ -24,7 +24,8 @@ const AllTask = ({ myTask, index, modalData, successAction }) => {
                 <Card.Body>
                     <Card.Title>Task: {index + 1}</Card.Title>
                     <Card.Text>
-                        {task}
+                        <h6>Task Details:- </h6>
+                        <p>{task}</p>
                     </Card.Text>
 
                     <>

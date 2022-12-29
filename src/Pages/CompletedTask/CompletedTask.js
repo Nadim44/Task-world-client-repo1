@@ -8,7 +8,7 @@ const CompletedTask = () => {
         queryKey: ['addTask'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/addTask', {
+                const res = await fetch('https://task1-server.vercel.app/addTask', {
                     headers: {
 
                     }
@@ -25,7 +25,7 @@ const CompletedTask = () => {
 
     const handleDeleteTask = task => {
         // console.log(task)
-        fetch(`http://localhost:5000/addTask/${task._id}`, {
+        fetch(`https://task1-server.vercel.app/addTask/${task._id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

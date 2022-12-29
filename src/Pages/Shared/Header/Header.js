@@ -28,7 +28,7 @@ const Header = () => {
         }
         console.log(AddTask)
         // save task into the database
-        fetch('http://localhost:5000/addTask', {
+        fetch('https://task1-server.vercel.app/addTask', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -74,7 +74,7 @@ const Header = () => {
                                         </>
                                         :
                                         <>
-                                            <Link to='/login'>Login</Link>
+                                            <Link className='m-2' to='/login'>Login</Link>
                                             <Link to='/register'>Register</Link>
                                         </>
                                 }
