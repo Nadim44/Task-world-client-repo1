@@ -40,6 +40,7 @@ const CompletedTask = () => {
 
     return (
         <div>
+            <h3> Total Task: {addTask?.length}</h3>
             {
                 addTask?.map((myTask, i) =>
                     <AllTask
